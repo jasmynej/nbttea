@@ -1,0 +1,11 @@
+.content {
+    @apply flex p-40;
+}
+.coming-soon {
+    @apply text-center mx-auto bg-amber-700;
+    @apply self-center;
+}
+
+.coming-soon h1 {
+    @apply text-9xl;
+}

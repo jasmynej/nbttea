@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@300;400;500&display=swap');
+* {
+    box-sizing: border-box;
+    
+}
+
+h2 {
+    font-family: 'Abril Fatface', cursive;
+
+   
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    @apply bg-orange-50;
+    //background-color:#EFEAE6;
+}
