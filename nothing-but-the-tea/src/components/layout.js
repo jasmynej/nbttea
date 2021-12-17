@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import { Link } from "gatsby"
 import {ShoppingBagIcon, UserIcon} from "@heroicons/react/outline"
 import '../styles/layout.css'
+
 export default function Layout({children}){
     const [cartItems,setCartItems] = useState(0)
     return (
@@ -12,8 +13,12 @@ export default function Layout({children}){
                     <div className="nav-item">
                         <Link to="/" className="link" activeClassName="active-link">home</Link>
                     </div>
-                    <div className="nav-item">
+                    <div className="nav-item dropdown" >
+                        <button className="dropdown-btn">shop</button>
+                        <div className="dropdown-content">
                         <Link to="/products" className="link" activeClassName="active-link">products</Link>
+                        </div>
+                        
                     </div>
                     <div className="nav-item">
                         <Link to="/services" className="link" activeClassName="active-link">services</Link>
