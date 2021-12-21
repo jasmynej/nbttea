@@ -21,7 +21,8 @@ module.exports = {
       options:{
         apiKey:"88ad6096df236974145df28e25808b93",
         password:"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",
-        storeUrl:"nothing-but-the-tea.myshopify.com"
+        storeUrl:"nothing-but-the-tea.myshopify.com",
+        downloadImages: true,
       }
     }
   ],

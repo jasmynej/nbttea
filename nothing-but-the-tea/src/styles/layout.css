@@ -1,21 +1,77 @@
 
 .nav-item {
-    @apply m-2;
+    @apply m-4;
 }
 
 #nav {
-    @apply text-center sticky w-full bg-neutral-50 flex justify-center;
+    @apply text-center sticky w-full bg-neutral-50 flex justify-end;
     @apply border-b-2 border-amber-700;
 }
 
+
+.nav-links {
+    @apply flex ;
+}
 .nav-item a {
     @apply hover:underline;
 }
 
 .active-link {
-    @apply underline text-lime-800;
+    @apply underline text-lime-800 font-semibold;
 }
 
 .link {
-    @apply hover:underline;
+    @apply hover:underline text-lg;
 }
+
+.icons {
+    @apply  self-center flex;
+}
+
+.cart-icon {
+    @apply text-gray-400 hover:text-black;
+}
+
+.cart-count {
+    @apply absolute top-3 right-3 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-amber-600 rounded-full;
+}
+.hide-cart {
+    @apply invisible;
+}
+
+
+.shopping-cart {
+    @apply w-3/12 place-self-end flex;
+}
+
+.cart {
+    position: relative;
+}
+.cart-content {
+    display:none;
+}
+
+.cart-icon:hover .cart-content {
+    display:block;
+    position: absolute;
+}
+
+
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+  }
+
+  .dropdown-btn {
+      @apply text-lg;
+  }
+.dropdown:hover .dropdown-content {display: block;}
