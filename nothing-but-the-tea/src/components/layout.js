@@ -16,7 +16,7 @@ export default function Layout({children}){
                     <div className="nav-item dropdown" >
                         <button className="dropdown-btn">shop</button>
                         <div className="dropdown-content">
-                        <Link to="/products" className="link" activeClassName="active-link">products</Link>
+                        <Link to="/products" className="link" activeClassName="active-link"> all products</Link>
                         </div>
                         
                     </div>
@@ -35,6 +35,12 @@ export default function Layout({children}){
                     <span className="relative inline-block">
                         <ShoppingBagIcon className="h-6 w-6 m-4 cart-icon"/>
                         <span className="cart-count">0</span>
+                        <div className="cart">
+                            <div className="cart-content">
+                                <p>your cart</p>
+                            </div>
+                        </div>
+                        
                     </span>
                     
                     
