@@ -8,7 +8,7 @@
 
 .product {
     @apply flex justify-center flex-col justify-items-center;
-    @apply text-center bg-amber-100 p-2 rounded-lg border-4 border-amber-200;
+    @apply text-center ;
     
 }
 
@@ -27,4 +27,41 @@
 
 .product h3 {
     @apply text-2xl font-medium;
+
+}
+
+.product-page {
+    @apply p-4;
+}
+
+.product-image {
+    width:500px;
+    height:500px;
+    @apply rounded-md;
+}
+.image-box{
+    @apply w-full;
+}
+.product-details {
+    @apply  w-full;
+}
+
+.product-details h1 {
+    @apply text-5xl p-2;
+}
+
+.product-details p {
+    @apply text-3xl font-light p-2;
+}
+
+.variants {
+    @apply flex py-3;
+}
+
+.variant {
+    @apply mx-3 p-3 border-2 border-orange-300 rounded-md hover:bg-orange-300;
+}
+
+.variant-selected {
+    @apply bg-orange-300;
 }

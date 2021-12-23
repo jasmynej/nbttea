@@ -52,9 +52,7 @@ export default function Layout({children}){
             <main className="grow">
                 {children}
             </main>
-            <div id="footer" className="text-center absolute inset-x-0 bottom-0">
-                merry christmas aunt connie! 🎄❤️
-            </div>
+           
         </div>
     )
 }
