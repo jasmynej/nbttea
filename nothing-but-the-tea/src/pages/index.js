@@ -11,7 +11,9 @@ const IndexPage = ({data}) => {
   return (
       <Layout title="home | nbttea">
         <div className="content">
-            
+            <div className="coming-soon">
+              <h1>WEBSITE CURRENTLY BREWING....</h1>
+            </div>
             
         </div>
       </Layout>
