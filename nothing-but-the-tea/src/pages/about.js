@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 // markup
 const AboutPage = () => {
   return (
-      <Layout>
+      <Layout title="about | nbttea">
         <div>
           <h1>about</h1>
         </div>

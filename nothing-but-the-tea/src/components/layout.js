@@ -3,31 +3,31 @@ import { Link } from "gatsby"
 import {ShoppingBagIcon, UserIcon} from "@heroicons/react/outline"
 import '../styles/layout.css'
 
-export default function Layout({children}){
+export default function Layout({title,children}){
     const [cartItems,setCartItems] = useState(0)
     return (
         <div className="container mx-auto flex flex-col">
-            <h2 className="text-center text-6xl m-2 text-amber-700">nothing but the tea</h2>
+            <title>{title}</title>
+            <h2 className="text-center text-6xl m-2 text-amber-700"><Link to="/" >Nothing But The Tea</Link></h2>
+            <div>
+
+            </div>
             <div id="nav">
+                <div id="nav-logo">
+                    
+                </div>
                 <div className="nav-links">
                     <div className="nav-item">
                         <Link to="/" className="link" activeClassName="active-link">home</Link>
                     </div>
-                    <div className="nav-item dropdown" >
-                        <button className="dropdown-btn">shop</button>
-                        <div className="dropdown-content">
-                        <Link to="/products" className="link" activeClassName="active-link"> all products</Link>
-                        </div>
-                        
+                    <div className="nav-item" >
+                        <Link to="/products" className="link" activeClassName="active-link">shop</Link>  
                     </div>
                     <div className="nav-item">
-                        <Link to="/services" className="link" activeClassName="active-link">services</Link>
+                        <Link to="/about" className="link" activeClassName="active-link">about</Link>
                     </div>
                     <div className="nav-item">
-                        <Link to="/about" className="link" activeClassName="active-link">about us</Link>
-                    </div>
-                    <div className="nav-item">
-                        <Link to="/contact" className="link" activeClassName="active-link">contact us</Link>
+                        <Link to="/contact" className="link" activeClassName="active-link">contact</Link>
                     </div>
                 
                 </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import Client from "shopify-buy"
 
 
@@ -29,5 +29,43 @@ export const StoreProvider = ({children}) => {
       const [checkout, setCheckout] = useState(defaultValues.checkout)
       const [loading,setLoading] = useState(false)
 
+      const setCheckoutItem = (checkout) => {
+        if (isBrowser) {
+          localStorage.setItem(localStorageKey, checkout.id)
+        }
+    
+        setCheckout(checkout)
+      }
+      const initializeCheckout = async () => {
+        const existingCheckoutID = isBrowser
+          ? localStorage.getItem(localStorageKey)
+          : null
+  
+        if (existingCheckoutID && existingCheckoutID !== `null`) {
+          try {
+            const existingCheckout = await client.checkout.fetch(
+              existingCheckoutID
+            )
+            if (!existingCheckout.completedAt) {
+              setCheckoutItem(existingCheckout)
+              return
+            }
+          } catch (e) {
+            localStorage.setItem(localStorageKey, null)
+          }
+        }
+  
+        const newCheckout = await client.checkout.create()
+        setCheckoutItem(newCheckout)
+      }
+      useEffect(() => {
+        //set up checkout
+        initializeCheckout()
+      },[])
+
+      const addVariantToCart = (variantId, quanity) => {
+        const checkoutID = checkout.id
+
+      }
 
 }

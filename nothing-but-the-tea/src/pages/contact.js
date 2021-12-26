@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 // markup
 const ContactPage = () => {
   return (
-      <Layout>
+      <Layout title="contact | nbttea">
         <div>
           <h1>contact</h1>
         </div>

@@ -8,7 +8,7 @@ import '../../styles/products.css'
 // markup
 const ProductsPage = ({data}) => {
   return (
-      <Layout>
+      <Layout title="products | nbttea">
 
         <div>
           <title>products</title>
